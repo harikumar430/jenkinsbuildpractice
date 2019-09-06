@@ -5,4 +5,7 @@ node('UBUNUTU'){
     stage('package'){
         sh 'mvn package'
     }
+    stage('archiveartifact'){
+        archive 'gameoflife-web/target/*.war'
+    }
 }
